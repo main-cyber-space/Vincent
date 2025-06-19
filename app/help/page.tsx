@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "What is a PAY ID?",
     answer:
-      "A PAY ID is a unique identifier that allows you to withdraw funds from your PayGo account. You can purchase a PAY ID for ₦7,250 from the Buy PAY ID page. When making payment for your PAY ID, make sure you add payment description (PayGo-PAY ID) to verify your payment easily.",
+      "A PAY ID is a unique identifier that allows you to withdraw funds from your PayGo account. You can purchase a PAY ID for ₦6,500 from the Buy PAY ID page. And when you're making payment for Your PAY ID make sure you add Payment description (PayGo-PAY ID) to verify your Payment easily.",
   },
   {
     question: "How do I purchase airtime or data?",
@@ -36,7 +36,7 @@ const faqs = [
 export default function HelpPage() {
   const handleContactSupport = () => {
     // Create WhatsApp URL with phone number and pre-filled message
-    const phoneNumber = "2349116350019" // Remove the + as it's added in the URL format
+    const phoneNumber = "2349113585676" // Remove the + as it's added in the URL format
     const message = encodeURIComponent("Hello, I need help with PayGo app.")
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
 
@@ -78,15 +78,6 @@ export default function HelpPage() {
           <Button onClick={handleContactSupport} className="bg-green-600 hover:bg-green-700 text-white">
             Contact our support team
           </Button>
-        </div>
-        <div className="pt-4 border-t">
-          <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-          <p className="text-gray-700">
-            <br />
-            Phone: +234 911 635 0019
-            <br />
-            Address: 33 Financial Street, Lagos, Nigeria
-          </p>
         </div>
       </div>
     </div>

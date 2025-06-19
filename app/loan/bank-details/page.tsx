@@ -7,7 +7,6 @@ import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { validatePayIdCode } from "@/utils/pay-id-validation"
 import { PayIdError } from "@/components/pay-id-error"
 
 export default function LoanBankDetailsPage() {
@@ -18,6 +17,9 @@ export default function LoanBankDetailsPage() {
   const [bank, setBank] = useState("")
   const [payId, setPayId] = useState("")
   const [showPayIdError, setShowPayIdError] = useState(false)
+
+  // The correct PAY ID
+  const CORRECT_PAY_ID = "PG-7474PAYDDT1I2PARFAGSGG"
 
   useEffect(() => {
     // Check if loan data exists
@@ -51,7 +53,7 @@ export default function LoanBankDetailsPage() {
       }
 
       // Check if PAY ID is correct
-      if (!validatePayIdCode(payId)) {
+      if (payId !== CORRECT_PAY_ID) {
         setShowPayIdError(true)
         return
       }
@@ -236,11 +238,7 @@ export default function LoanBankDetailsPage() {
       </div>
 
       {/* PAY ID Error Popup */}
-      <PayIdError
-        isOpen={showPayIdError}
-        onClose={() => setShowPayIdError(false)}
-        message="Invalid PAY ID code. Please enter the correct PAY ID to apply for a free loan."
-      />
+      {showPayIdError && <PayIdError onClose={() => setShowPayIdError(false)} />}
     </div>
   )
 }

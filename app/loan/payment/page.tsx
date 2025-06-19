@@ -11,7 +11,7 @@ const LoanPaymentPage = () => {
   const [accountNumberCopied, setAccountNumberCopied] = useState(false)
 
   const handleCopyAccountNumber = () => {
-    navigator.clipboard.writeText("8158322178")
+    navigator.clipboard.writeText("2048684033")
     setAccountNumberCopied(true)
     toast.success("Account number copied to clipboard!")
 
@@ -38,16 +38,16 @@ const LoanPaymentPage = () => {
               <div className="border rounded-md p-4">
                 <p className="font-semibold">Account Details:</p>
                 <p>
-                  Account Number: <span className="font-medium">8158322178</span>
+                  Account Number: <span className="font-medium">2048684033</span>
                   <Button variant="ghost" size="sm" onClick={handleCopyAccountNumber} disabled={accountNumberCopied}>
                     {accountNumberCopied ? "Copied!" : "Copy"}
                   </Button>
                 </p>
                 <p>
-                  Bank Name: <span className="font-medium">Moniepoint MFB</span>
+                  Bank Name: <span className="font-medium">KUDA MFB</span>
                 </p>
                 <p>
-                  Account Name: <span className="font-medium">PASCAL KENECHUKWU CHUKWUDI</span>
+                  Account Name: <span className="font-medium">Ebuka Sabastine</span>
                 </p>
               </div>
             </div>
