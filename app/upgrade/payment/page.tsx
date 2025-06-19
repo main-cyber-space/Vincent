@@ -110,7 +110,7 @@ export default function UpgradePaymentPage() {
 
             <div>
               <p className="text-gray-700 mb-1">Account Name</p>
-              <p className="font-bold">Ebuka Sabastine</p>
+              <p className="font-bold">Chukwudi Kenechukwu Pascal</p>
             </div>
           </div>
 
