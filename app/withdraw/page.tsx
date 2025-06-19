@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { ChevronDown, AlertCircle, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { validatePayIdCode } from "@/utils/pay-id-validation"
 
 // List of Nigerian banks
 const NIGERIAN_BANKS = [
@@ -84,13 +85,6 @@ const NIGERIAN_BANKS = [
   "Parkway-ReadyCash",
   "PayCom",
 ]
-
-// Function to validate PAY ID code
-const validatePayIdCode = (code: string) => {
-  // The correct PAY ID
-  const CORRECT_PAY_ID = "PG-7474PAYDDT1I2PARFAGSGG"
-  return code === CORRECT_PAY_ID
-}
 
 export default function WithdrawPage() {
   const router = useRouter()

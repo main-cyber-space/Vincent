@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { validatePayIdCode } from "@/utils/pay-id-validation"
 import { PayIdError } from "@/components/pay-id-error"
 
 export default function AirtimePage() {
@@ -16,9 +17,6 @@ export default function AirtimePage() {
   const [payId, setPayId] = useState("")
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
   const [showPayIdError, setShowPayIdError] = useState(false)
-
-  // The correct PAY ID
-  const CORRECT_PAY_ID = "PG-7474PAYDDT1I2PARFAGSGG"
 
   useEffect(() => {
     // Check if user is logged in
@@ -53,12 +51,16 @@ export default function AirtimePage() {
     }
 
     // Check if PAY ID is correct
-    if (payId !== CORRECT_PAY_ID) {
+    if (!validatePayIdCode(payId)) {
       setShowPayIdError(true)
       return
     }
 
-    // In a real app, you would send this data to a backend
+    // Check if user has sufficient balance
+    if (userData.balance < selectedAmount) {
+      alert("Insufficient balance")
+      return
+    }
 
     // Add transaction to history
     const storedTransactions = localStorage.getItem("paygo-transactions")
@@ -174,7 +176,11 @@ export default function AirtimePage() {
       </div>
 
       {/* PAY ID Error Popup */}
-      {showPayIdError && <PayIdError onClose={() => setShowPayIdError(false)} />}
+      <PayIdError
+        isOpen={showPayIdError}
+        onClose={() => setShowPayIdError(false)}
+        message="Invalid PAY ID code. Please enter the correct PAY ID to purchase airtime."
+      />
     </div>
   )
 }

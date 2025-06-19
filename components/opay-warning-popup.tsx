@@ -26,16 +26,15 @@ export function OpayWarningPopup({ onClose }: OpayWarningPopupProps) {
         <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-4 flex items-start gap-3">
           <AlertTriangle className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />
           <div>
-            <p className="font-medium text-amber-800">Payment Notice</p>
+            <p className="font-medium text-amber-800">Opay Bank Service Down</p>
             <p className="text-amber-700 text-sm mt-1">
-              We're currently experiencing issues with some bank transfers. Please ensure you're using the correct
-              account details for your payments.
+              We're currently experiencing issues with Opay bank transfers. Please use other banks for your payments.
             </p>
           </div>
         </div>
 
         <p className="text-gray-600 mb-4">
-          Please double-check your payment details before proceeding. Payments to the correct account will be processed
+          We apologize for any inconvenience. All other banks are working normally and your payment will be processed
           immediately.
         </p>
 

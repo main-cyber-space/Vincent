@@ -41,7 +41,7 @@ export default function PaymentFailedPage() {
       <h2 className="text-2xl font-bold text-orange-400 mb-4 text-center">Transaction verification failed!</h2>
 
       <p className="text-center mb-8 max-w-md">
-        Your payment could not be completed. Reason:No Payment received from you/ invalid payment method.
+        Your payment could not be completed. Reason: No payment received from you / invalid payment method.
       </p>
 
       {/* Transaction ID Field */}

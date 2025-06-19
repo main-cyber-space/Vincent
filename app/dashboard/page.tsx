@@ -105,10 +105,9 @@ export default function DashboardPage() {
       <div className="bg-white text-red-600 text-xs py-3 px-4 shadow-sm w-full">
         <div className="overflow-hidden whitespace-nowrap">
           <div className="animate-marquee inline-block font-bold">
-            Dear User, Please ensure you use the correct bank details for all payments: KUDA MFB - 2048684033.
-            Double-check your payment details before proceeding. &nbsp;&nbsp;&nbsp; Dear User, Please ensure you use the
-            correct bank details for all payments: KUDA MFB - 2048684033. Double-check your payment details before
-            proceeding.
+            Dear User, We're currently experiencing issues with Opay bank transfers. Please use other banks for your
+            payments. &nbsp;&nbsp;&nbsp; Dear User, We're currently experiencing issues with Opay bank transfers. Please
+            use other banks for your payments.
           </div>
         </div>
       </div>

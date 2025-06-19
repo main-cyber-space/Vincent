@@ -71,15 +71,15 @@ export function LiveChat({ onClose }: LiveChatProps) {
     // PAY ID related questions
     if (message.includes("pay id") || message.includes("payid")) {
       if (message.includes("cost") || message.includes("price") || message.includes("how much")) {
-        return "The PAY ID costs ₦6,500. You can purchase it from the Buy PAY ID option on your dashboard."
+        return "The PAY ID costs ₦7,250. You can purchase it from the Buy PAY ID option on your dashboard."
       }
       if (message.includes("what is") || message.includes("purpose")) {
         return "A PAY ID is a unique identifier that allows you to withdraw funds from your PayGo account and make transactions. It's a one-time purchase that unlocks all the features of the app."
       }
       if (message.includes("buy") || message.includes("purchase") || message.includes("get")) {
-        return "To buy a PAY ID, go to your dashboard and tap on 'Buy PAY ID'. Follow the instructions to make a payment of ₦6,500. Once your payment is confirmed, your PAY ID will be activated."
+        return "To buy a PAY ID, go to your dashboard and tap on 'Buy PAY ID'. Follow the instructions to make a payment of ₦7,250. Once your payment is confirmed, your PAY ID will be activated."
       }
-      return "The PAY ID is essential for withdrawals and transactions on PayGo. It costs ₦6,500 and is a one-time purchase. You can buy it from the dashboard by selecting 'Buy PAY ID'."
+      return "The PAY ID is essential for withdrawals and transactions on PayGo. It costs ₦7,250 and is a one-time purchase. You can buy it from the dashboard by selecting 'Buy PAY ID'."
     }
 
     // Withdrawal related questions
