@@ -10,7 +10,7 @@ export default function PaymentPage() {
   const [formData, setFormData] = useState<any>(null)
   const [copiedAmount, setCopiedAmount] = useState(false)
   const [copiedAccount, setCopiedAccount] = useState(false)
-  const [showOpayWarning, setShowOpayWarning] = useState(true)
+  const [showOpayWarning, setShowOpayWarning] = useState(false)
 
   useEffect(() => {
     // Check if form data exists
