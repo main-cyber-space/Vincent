@@ -23,11 +23,11 @@ export default function GroupsPage() {
   }, [router])
 
   const handleJoinWhatsApp = () => {
-    window.open("https://whatsapp.com/channel/0029Vb96gJXCHDye6YCpHy2d", "_blank")
+    window.open("https://whatsapp.com/channel/0029VbATe7VL2AU5Qq1O0w2x", "_blank")
   }
 
   const handleJoinTelegram = () => {
-    window.open("https://t.me/Reward_community01", "_blank")
+    window.open("https://t.me/Reward_community", "_blank")
   }
 
   if (!userData) {
